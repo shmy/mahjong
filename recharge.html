@@ -10,7 +10,15 @@
 </head>
 <body>
 <div class="page">
-  <div id="content"></div>
+  <div id="content">
+    <div id="main"></div>
+    <div class="collapse">
+      <input type="checkbox" id="collapse-section1"  aria-hidden="true">
+      <label for="collapse-section1" aria-hidden="true">其他工具</label>
+      <div id="delete-photo">
+      </div>
+    </div>
+  </div>
   <div class="nav-bar">
     <a href="./register.html" class="nav-bar-item">
       <span class="icon-info secondary"></span>
@@ -40,7 +48,7 @@
       {label: '卡密', type: 'input', name: 'pwd'},
     ];
     var form = _.createForm({
-      container: $('#content'),
+      container: $('#main'),
       title: '老用户充值',
       submitTitle: '立即充值',
       fields: fields,
@@ -52,6 +60,27 @@
     form.on('submit', function (values) {
       console.log(values);
       _.toast('充值完毕');
+      _.scrollTop();
+      form.reset();
+    });
+  });
+  $(function () {
+    var fields = [
+      {label: '亲友圈ID', type: 'input', name: 'id'},
+    ];
+    var form = _.createForm({
+      container: $('#delete-photo'),
+      title: '删除亲友圈图片',
+      submitTitle: '删除图片',
+      fields: fields,
+      defaultValues: {
+        id: '',
+        pwd: ''
+      }
+    });
+    form.on('submit', function (values) {
+      console.log(values);
+      _.toast('删除完毕');
       _.scrollTop();
       form.reset();
     });

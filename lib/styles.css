@@ -30,7 +30,7 @@ form {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 0;
+  width: 0;
 }
 
 button.fluid {
@@ -62,7 +62,7 @@ button.fluid {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-height: 0;
+  height: 0;
   overflow-y: auto;
 }
 .nav-bar {
@@ -78,7 +78,7 @@ button.fluid {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 0;
+  width: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -119,6 +119,6 @@ button.fluid {
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  min-width: 0;
+  width: 0;
   height: 40px;
 }
