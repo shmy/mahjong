@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>充值</title>
+  <link rel="stylesheet" href="./lib/styles.css">
+</head>
+<body>
+<div class="page">
+  <div id="content"></div>
+  <div class="nav-bar">
+    <a href="./register.html" class="nav-bar-item">
+      <span class="icon-info secondary"></span>
+      <span class="nav-bar-text">注册</span>
+    </a>
+    <a href="./search.html" class="nav-bar-item">
+      <span class="icon-search"></span>
+      <span class="nav-bar-text">查询</span>
+    </a>
+    <a href="./users.html" class="nav-bar-item">
+      <span class="icon-user"></span>
+      <span class="nav-bar-text">我的</span>
+    </a>
+    <a href="./recharge.html" class="nav-bar-item active">
+      <span class="icon-rss"></span>
+      <span class="nav-bar-text">充值</span>
+    </a>
+  </div>
+</div>
+<script src="./lib/zepto.min.js"></script>
+<script src="./lib/qs.min.js"></script>
+<script src="./lib/script.js"></script>
+<script>
+  $(function () {
+    var fields = [
+      {label: '手机获取ID', type: 'input', name: 'id'},
+      {label: '卡密', type: 'input', name: 'pwd'},
+    ];
+    var form = _.createForm({
+      container: $('#content'),
+      title: '老用户充值',
+      submitTitle: '立即充值',
+      fields: fields,
+      defaultValues: {
+        id: '',
+        pwd: ''
+      }
+    });
+    form.on('submit', function (values) {
+      console.log(values);
+      _.toast('充值完毕');
+      _.scrollTop();
+      form.reset();
+    });
+  });
+</script>
+</body>
+</html>

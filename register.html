@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>注册</title>
+  <link rel="stylesheet" href="./lib/styles.css">
+</head>
+<body>
+<div class="page">
+  <div id="content"></div>
+  <div class="nav-bar">
+    <a href="./register.html" class="nav-bar-item active">
+      <span class="icon-info secondary"></span>
+      <span class="nav-bar-text">注册</span>
+    </a>
+    <a href="./search.html" class="nav-bar-item">
+      <span class="icon-search"></span>
+      <span class="nav-bar-text">查询</span>
+    </a>
+    <a href="./users.html" class="nav-bar-item">
+      <span class="icon-user"></span>
+      <span class="nav-bar-text">我的</span>
+    </a>
+    <a href="./recharge.html" class="nav-bar-item">
+      <span class="icon-rss"></span>
+      <span class="nav-bar-text">充值</span>
+    </a>
+  </div>
+</div>
+<script src="./lib/zepto.min.js"></script>
+<script src="./lib/qs.min.js"></script>
+<script src="./lib/script.js"></script>
+<script>
+  $(function () {
+    var fields = [
+      {label: '亲友圈ID', type: 'input', name: 'id'},
+      {label: '用户手机号', type: 'input', name: 'phone'},
+      {label: '挂机账号', type: 'input', name: 'username'},
+      {label: '挂机密码', type: 'input', name: 'password'},
+      {label: '手机获取ID', type: 'input', name: 'idForPhone'},
+      {
+        label: '麻将平台', type: 'select', name: 'mahjong',
+        extra: {
+          options: [
+            {label: '四川熊猫麻将', value: '1'},
+            {label: '广东闲来麻将', value: '2'},
+            {label: '陕西闲来麻将', value: '3'},
+            {label: '贵州闲来麻将', value: '4'},
+            {label: '安徽闲来麻将', value: '5'},
+            {label: '山水云南麻将', value: '6'},
+            {label: '闲来湖南麻将', value: '7'},
+            {label: '盼盼陕西麻将', value: '8'},
+            {label: '琼崖海南麻将', value: '9'},
+            {label: '山水广西麻将', value: '10'},
+            {label: '宁夏麻将', value: '11'},
+          ]
+        }
+      },
+      {
+        label: '是否隐藏ID', type: 'select', name: 'isHidden',
+        extra: {
+          options: [
+            {label: '隐藏', value: '1'},
+            {label: '不隐藏', value: '0'}
+          ]
+        }
+      },
+      {
+        label: '选择颜色', type: 'select', name: 'color',
+        extra: {
+          options: [
+            {label: '图1', value: '1'},
+            {label: '图2', value: '2'},
+            {label: '图3', value: '3'},
+            {label: '图4', value: '4'},
+          ]
+        }
+      },
+      {label: '机器编号', type: 'input', name: 'code'},
+      {
+        label: '平台', type: 'select', name: 'platform',
+        extra: {
+          options: [
+            {label: '闲来平台', value: '1'},
+          ]
+        }
+      },
+      {label: '亲友圈名', type: 'input', name: 'name'},
+      {
+        label: '输赢排序', type: 'select', name: 'sort',
+        extra: {
+          options: [
+            {label: '图1', value: '1'},
+            {label: '图2', value: '2'},
+            {label: '图3', value: '3'},
+            {label: '图4', value: '4'},
+          ]
+        }
+      },
+      {
+        label: '是否发送文字', type: 'select', name: 'send',
+        extra: {
+          options: [
+            {label: '不发送', value: '1'},
+            {label: '发送', value: '2'},
+          ]
+        }
+      },
+      {label: '文字内容', type: 'textarea', name: 'content'},
+
+    ];
+    var form = _.createForm({
+      container: $('#content'),
+      title: '新用户注册',
+      submitTitle: '立即注册',
+      fields: fields,
+      defaultValues: {
+        id: 'id',
+        phone: 'phone',
+        username: 'username',
+        password: 'password',
+        idForPhone: 'idForPhone',
+        mahjong: '1',
+        isHidden: '0',
+        color: '2',
+        code: 'code',
+        platform: '1',
+        name: 'name',
+        sort: '2',
+        send: '1',
+        content: 'content',
+      }
+    });
+    form.on('submit', function (values) {
+      console.log(values);
+      _.toast('注册完毕');
+      _.scrollTop();
+      form.reset();
+    });
+  });
+</script>
+</body>
+</html>

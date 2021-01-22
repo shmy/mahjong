@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>我的</title>
+  <link rel="stylesheet" href="./lib/styles.css">
+</head>
+<body>
+<div class="page">
+  <div id="content">
+    <button>获取我的到期用户</button>
+      <button>未到期</button>
+      <button>快到期</button>
+      <button>已到期</button>
+      <button>未分组</button>
+    <table>
+      <thead>
+      <tr>
+        <th>机器编号</th>
+        <th>到期时间</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td data-label="机器编号">001</td>
+        <td data-label="到期时间">2021-11-11</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="nav-bar">
+    <a href="./register.html" class="nav-bar-item">
+      <span class="icon-info secondary"></span>
+      <span class="nav-bar-text">注册</span>
+    </a>
+    <a href="./search.html" class="nav-bar-item">
+      <span class="icon-search"></span>
+      <span class="nav-bar-text">查询</span>
+    </a>
+    <a href="./users.html" class="nav-bar-item active">
+      <span class="icon-user"></span>
+      <span class="nav-bar-text">我的</span>
+    </a>
+    <a href="./recharge.html" class="nav-bar-item">
+      <span class="icon-rss"></span>
+      <span class="nav-bar-text">充值</span>
+    </a>
+  </div>
+</div>
+<script src="./lib/zepto.min.js"></script>
+<script src="./lib/qs.min.js"></script>
+<script src="./lib/script.js"></script>
+</body>
+</html>
