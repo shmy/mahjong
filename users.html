@@ -49,112 +49,21 @@
       <tr>
         <td data-label="编号">001</td>
         <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
+        <td data-label="获取ID">123123<span class="copy" data-clipboard-text="123123">复制</span></td>
         <td data-label="到期时间">2020-12-12</td>
         <td data-label="手机号">18989898989</td>
       </tr>
       <tr>
         <td data-label="编号">001</td>
         <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
+        <td data-label="获取ID">321<span class="copy" data-clipboard-text="123123">复制</span></td>
         <td data-label="到期时间">2020-12-12</td>
         <td data-label="手机号">18989898989</td>
       </tr>
       <tr>
         <td data-label="编号">001</td>
         <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
-        <td data-label="到期时间">2020-12-12</td>
-        <td data-label="手机号">18989898989</td>
-      </tr>
-      <tr>
-        <td data-label="编号">001</td>
-        <td data-label="ID">123</td>
-        <td data-label="获取ID">123123</td>
+        <td data-label="获取ID">21321<span class="copy" data-clipboard-text="123123">复制</span></td>
         <td data-label="到期时间">2020-12-12</td>
         <td data-label="手机号">18989898989</td>
       </tr>
@@ -163,7 +72,10 @@
   </div>
 </div>
 <script src="./lib/zepto.min.js"></script>
-<script src="./lib/qs.min.js"></script>
-<script src="./lib/script.js"></script>
+<script src="./lib/clipboard.min.js"></script>
+<script>
+  // 查到列表后调用一下
+  new ClipboardJS('[data-clipboard-text]');
+</script>
 </body>
 </html>

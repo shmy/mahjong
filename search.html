@@ -30,7 +30,8 @@
   </div>
   <div id="content">
     <div class="filter-bar">
-      <input placeholder="手机获取ID" type="text"><button id="search">查询</button>
+      <input placeholder="手机获取ID" type="text">
+      <button id="search">查询</button>
     </div>
     <p id="expiration-time"></p>
     <div id="main"></div>
@@ -147,9 +148,11 @@
         }
       });
       form.on('submit', function (values) {
-        console.log(values);
-        _.toast('修改完毕');
-        _.scrollTop();
+        _.confirm(function () {
+          console.log(values);
+          _.toast('修改完毕');
+          _.scrollTop();
+        });
       });
     });
 

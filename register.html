@@ -135,10 +135,13 @@
       }
     });
     form.on('submit', function (values) {
-      console.log(values);
-      _.toast('注册完毕');
-      _.scrollTop();
-      form.reset();
+      _.confirm(function() {
+        console.log(values);
+        _.toast('注册完毕');
+        _.scrollTop();
+        form.reset();
+      });
+
     });
   });
 </script>
